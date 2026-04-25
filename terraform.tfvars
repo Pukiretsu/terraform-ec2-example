@@ -2,7 +2,7 @@ cuenta           = "betek"
 proyecto         = "despliegue-ec2-Angel"
 key_name         = "terraform-lab-angel-keypair"
 private_key_path = "./terraform-lab-angel-keypair.pem"
-vpc_id = ""
+vpc_id           = ""
 
 tags = {
   "enviroment"    = "dev"
@@ -13,7 +13,7 @@ tags = {
 ec2_config = {
   instance_1 = {
     role_name     = "RolEc2AngelGonzalez"
-    ami           = "amazon-linux-2023" # Valor para reemplazar en el datasource
+    ami           = "amazon-linux-2023"
     instance_type = "t2.micro"
     subnet_id     = "subnet-00227b47a5f26ec04"
     policy_arn    = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
@@ -30,7 +30,6 @@ ec2_config = {
     }
   }
 }
-
 
 sg_config = {
   instance_1 = {
